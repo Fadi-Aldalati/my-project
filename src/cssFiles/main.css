@@ -1,0 +1,160 @@
+@media screen and (min-width: 800px) {
+
+.container-fluid.cards-b{
+    max-height:auto;
+    background: linear-gradient(
+        to top,
+        #1E90FF 0%,
+        #1E90FF 70%,
+        white 70%,
+        white 100%
+    );
+    font-family:"Times New Roman", Times, serif;
+    max-width:100%;
+}
+
+
+.container.wrap{ 
+    max-width: 70%;
+  }
+  .card.round{
+    border-radius: 2em;
+    border-color:#1E90FF;
+    box-shadow: 0 2px 5px 0 #1E90FF, 
+        0 2px 10px 0 #1E90FF;
+}
+
+.container{
+    padding:10px;
+    font-family:"Times New Roman", Times, serif;
+
+}
+
+
+.footericon{
+    border-radius: 50%;
+    border: 1px solid #000;
+    width: 43px;
+    height: 43px;
+    padding:2px;
+    margin: 2px;
+}
+.card.box{
+    border-radius: 2em;
+    border-color:white;
+    box-shadow: 0 2px 2px 0 #1E90FF, 
+        0 1px 4px 0 #1E90FF;
+    padding:10px;
+}
+.bolded{
+    font-weight:bold;
+}
+* {
+    box-sizing: border-box;
+  }
+  .about-image {
+    background-image: url("../img/about-image-1.jpg");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .home-image {
+    background-image: url("../img/meh.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-t{
+    filter: blur(-2px);
+  -webkit-filter: blur(-2px);
+  color:white;
+  }
+  
+}
+h2{
+    font-family:"Times New Roman", Times, serif;
+}
+h4{
+    font-family:"Times New Roman", Times, serif;
+}
+.style{
+  background-color: white;
+  padding:20px;
+}
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.divNav{
+    padding:0 1rem;
+}
+.divNav a{
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+    padding:1rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    
+      .card.round{
+        border-radius: 2em
+    }
+    .footericon{
+        border-radius: 50%;
+        border: 1px solid #000;
+        width: 43px;
+        height: 43px;
+        padding:2px;
+        margin: 2px;
+    }
+    .container-fluid.cards-b{
+        max-height:auto;
+        background: #1E90FF;
+        width:auto;
+    }
+    .container{
+        width:auto;
+        margin:10px;
+    }
+    .card.box{
+        border-radius: 2em;
+        border-color:white;
+        box-shadow: 0 2px 2px 0 #1E90FF, 
+            0 1px 4px 0 #1E90FF;
+            
+    }
+    * {
+        box-sizing: border-box;
+      }
+      .about-image {
+        background-image: url("../img/about-image-1.jpg");
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .about-t{
+        filter: blur(-2px);
+      -webkit-filter: blur(-2px);
+      color:white;
+      }
+      .about-text {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+      }
+      .home-image {
+        background-image: url("../img/meh.jpg");
+        background-size: cover;
+      }
+    
+    
+}
