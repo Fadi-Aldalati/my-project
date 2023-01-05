@@ -12,7 +12,7 @@ const projectVariants={
         x:15,
     },
 } 
-var t=-8;
+var t=-10;
 const Project = (props) => {
     const {title,body,image,diffSize}=props;
     const width = window.innerWidth;

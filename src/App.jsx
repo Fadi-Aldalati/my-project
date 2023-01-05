@@ -12,7 +12,8 @@ class App extends Component {
       <NavBar />
       
               <Routes>
-              <Route path="/main" element={<Main/>} />
+              <Route path="/main" element={<Main customProp={'Home'}/>} />
+              <Route path="/main/OurProjects" element={<Main customProp={'OurProjects'} />} />
               <Route path="/" element={<Navigate replace to="/main" />} />
               </Routes>
               

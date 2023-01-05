@@ -3,14 +3,14 @@ import { NavLink} from 'react-router-dom';
 import "../cssFiles/main.css";
 import logo from "../img/logo.png";
 
-
+const Items = [{title:'Home',link:'/Main'},{title:'Our Projects',link:'/main/OurProjects',nonActive:true},{title:'Our Process',link:''},{title:'Careers',link:''},{title:'Blog',link:''},{title:'Contact Us',link:''}];
 
 class NavBar extends Component {
    
     render() { 
         const width = window.innerWidth;
         const padding=width*10/100;
-
+        console.log(Items);
 
         return (
             <>
@@ -20,12 +20,16 @@ class NavBar extends Component {
                     <img src={logo}  alt="Logo" height="21px" width="145px"/>
                         <div className="collapse navbar-collapse">
                     <div className="navbar-nav mx-auto divNav">
-                        <NavLink  to="/main" style={({ isActive }) => ({
-                                color: isActive ? '#1E90FF' : 'black',
-                                background: isActive ? 'white' : 'white',
-                        })} >Home</NavLink>
-                        <NavLink activeclassname="active"  to="/login">Login</NavLink>
-                        <NavLink activeclassname="active"  to="/register" >Register</NavLink>
+                        
+                       {Items.map(item=>{
+                        return (<NavLink key={item.link} to={item.link} style={({ isActive   }) => ({
+                            color: isActive && !item.nonActive ? '#1E90FF' : 'black',
+                            background: isActive ? 'white' : 'white',
+                       })} >{item.title}</NavLink>
+                       )})
+
+                       } 
+                        
                        
                 </div>
                 </div>
@@ -41,19 +45,9 @@ class NavBar extends Component {
  
 export default NavBar;
 /* 
- <div className="" >
-            <nav className="navbar fixing navbar-expand-lg"style={{height:'70px'}}>
-                <img src={logo}  alt="Logo" height="21px" width="145px"/>
-                
-                 <div className="collapse navbar-collapse">
-                    <div className="navbar-nav mx-auto">
-                        <NavLink className="nav-item nav-link" to="/main">Home</NavLink>
-                        <NavLink className="nav-item nav-link" to="/login">Login</NavLink>
-                        <NavLink className="nav-item nav-link" to="/register">Register</NavLink>
-                </div>
-                </div>
-                <NavLink className="nav-item nav-link" to="/register">Something</NavLink>
-            </nav>
-            </div>
+ <NavLink  to="/main" style={({ isActive }) => ({
+                                color: isActive ? '#1E90FF' : 'black',
+                                background: isActive ? 'white' : 'white',
+                        })} >Home</NavLink>
 
 */
